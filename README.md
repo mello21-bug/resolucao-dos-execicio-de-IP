@@ -1,1 +1,1 @@
-# resolucao-dos-execicio-de-IP
+# resolucao-dos-execicios-de-IP
