@@ -6,8 +6,8 @@ Faça um programa que mostre os números pares entre 1 e 100.
 
 # Resolução:
 
-O problema não precisa de entrada.  
-Vamos usar um loop `for` para imprimir todos os pares entre 1 e 100.
+O problema não precisa de entrada.  Mostraremos três formas de resolver esse exercício.
+Primeiro vamos usar um loop `for` para imprimir todos os pares entre 1 e 100.
 
 ```c
 #include <stdio.h>
@@ -19,4 +19,37 @@ int main() {
     }
     return 0;
 }
+```
+Uma versão usando `while`: 
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 2;
+
+    while (i <= 100) {
+        printf("%d\n", i);
+        i += 2;
+    }
+
+    return 0;
+}
+```
+E por fim, uma versão com `do-while`:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 2;
+
+    do {
+        printf("%d\n", i);
+        i += 2;
+    } while (i <= 100);
+
+    return 0;
+}
+
 
