@@ -6,7 +6,10 @@ Faça um programa que mostre os números pares entre 1 e 100.
 
 # Resolução:
 
-O problema não precisa de entrada.  Mostraremos três formas de resolver esse exercício.
+O problema não precisa de entrada. Algo que se torna crucial nas três estruturas de repetição é inicializar o contador i=2, pois isso já nos garante que o primeiro número a ser impresso seja par, e usar i+=2 assegura que os próximos números impressos também serão pares, porque assim você sempre pula para o próximo número par.
+
+
+Mostraremos três formas de resolver esse exercício.
 Primeiro vamos usar um loop `for` para imprimir todos os pares entre 1 e 100.
 
 ```c
