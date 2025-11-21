@@ -37,7 +37,8 @@ Após ter deixado o menor valor em `X` e o maior valor em `Y`, iremos percorrer 
       soma+=contador;
   }
   ```
-Ao final do laço de iterações, imprimimos o valor final encontrado através da função `printf`:
+Ao final do laço de iterações, imprimimos o valor final encontrado através da função `printf`. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
+
 
 ```c
   printf("%d\n",soma);

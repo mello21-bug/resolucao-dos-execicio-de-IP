@@ -15,7 +15,7 @@ Lemos o valor de *N*.
 ```c
     scanf("%d", &num);
 ```
-Agora no `for()`, nós iniciaremos ele com cont=2, utilizaremos um <= para comparar *N* com o cont e por fim iremos incrementar o contador de 2 em 2 `(cont+=2)` para que ele sempre seja par. Dentro do `for()` iremos imprimir o quadrado de cada par (sendo que o nosso par é o contador), finalizando a lógica.
+Agora no `for()`, nós iniciaremos ele com cont=2, utilizaremos um <= para comparar *N* com o cont e por fim iremos incrementar o contador de 2 em 2 `(cont+=2)` para que ele sempre seja par. Dentro do `for()` iremos imprimir o quadrado de cada par (sendo que o nosso par é o contador), finalizando a lógica. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
 ```c
     for ( cont = 2; cont <= num; cont+=2)
     {

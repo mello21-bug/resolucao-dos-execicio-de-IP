@@ -35,7 +35,8 @@ Para ler a entrada, usa-se scanf dentro da estrutura de repetição. Caso o valo
         }
 ```
 
-Em seguida, exibe-se o resultado: escreve-se o contador de positivos, calcula-se a media e a escreve na tela utilizando a função `printf`:
+Em seguida, exibe-se o resultado: escreve-se o contador de positivos, calcula-se a media e a escreve na tela utilizando a função `printf`. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
+
 
 ```c
         printf("%d valores positivos\n", contPositivos);

@@ -56,7 +56,8 @@ Se o número em questão não for par, este é necessariamente ímpar e por cont
                 }
         }
 ```
-Em seguida, escreve-se o contador de pares, impares, positivos e negativos, na respectiva ordem pedida pelo enunciado, na tela utilizando a função `printf`:
+Em seguida, escreve-se o contador de pares, impares, positivos e negativos, na respectiva ordem pedida pelo enunciado, na tela utilizando a função `printf`. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
+
 
 ```c
         printf("%d valor(es) par(es)\n", contPares);

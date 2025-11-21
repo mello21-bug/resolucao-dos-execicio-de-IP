@@ -21,7 +21,8 @@ Realizamos a leitura do valor inicial que será passado, isso é feito através 
 scanf("%d",&X);
 ```
 
-Para resolver o problema será necessário um loop de operações, para isso utilizaremos a estrutura `while`, esta será responsável de verificar se o valor em questão é ímpar, através da comparação `(X%2!=0)`, durante o loop iremos reutilizar a variável `X`, que possuía inicialmente o valor passado pelo usuário, este ira armazenar a cada iteração do loop, um valor da iteração passado adicionado de 1, como é possível ver ao final a utilização de `X++`. Para que os números impares sejam impressos um em cada linha, utilizamos o \n dentro da função `printf`.
+Para resolver o problema será necessário um loop de operações, para isso utilizaremos a estrutura `while`, esta será responsável de verificar se o valor em questão é ímpar, através da comparação `(X%2!=0)`, durante o loop iremos reutilizar a variável `X`, que possuía inicialmente o valor passado pelo usuário, este ira armazenar a cada iteração do loop, um valor da iteração passado adicionado de 1, como é possível ver ao final a utilização de `X++`. Para que os números impares sejam impressos um em cada linha, utilizamos o \n dentro da função `printf`. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
+
 
 ```c
 contador = 0;

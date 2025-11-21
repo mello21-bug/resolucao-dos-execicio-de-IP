@@ -24,7 +24,7 @@ Primeiro, vamos declarar as variáveis necessárias. Precisaremos de cinco vari�
         fora++;
 }
 ```
-Por fim, imprimimos na tela quantos estão dentro do intervalo e quantos estão fora.
+Por fim, imprimimos na tela quantos estão dentro do intervalo e quantos estão fora. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
 
 ```c
 printf("%d in\n", dentro);
