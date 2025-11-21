@@ -37,5 +37,9 @@ Para ler a entrada, usa-se scanf dentro da estrutura de repetição. Caso o valo
 
 Em seguida, exibe-se o resultado: escreve-se o contador de positivos, calcula-se a media e a escreve na tela utilizando a função `printf`:
 
+```c
         printf("%d valores positivos\n", contPositivos);
         printf("%.1f\n", soma/contPositivos);
+```
+
+O %.1f será substituido pelo resultado da divisão de soma pelo contPositivos. O '.1' indica quantas casas decimais serão mostradas na tela, que no caso é uma.
