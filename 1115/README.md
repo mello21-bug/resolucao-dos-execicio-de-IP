@@ -8,6 +8,7 @@ Escreva um programa para ler as coordenadas (X,Y) de uma quantidade indeterminad
 # Resolução:
 
 O objetivo desse exercício é ler duas coordenadas e escrever de qual quadrante esse ponto é no plano cartesiano. Abaixo temos um exeplo de plano cartesiano e a localização de cada quadrante:
+```
 
                             Λ Y
                             |
@@ -31,8 +32,7 @@ O objetivo desse exercício é ler duas coordenadas e escrever de qual quadrante
                             |
                             |
                             |
-
-
+```
 Primeiro criamos duas variáveis do tipo `int`:
 
 ```c

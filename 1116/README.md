@@ -35,7 +35,7 @@ Dentro do laço lemos *x* e *y* para fazer a divisão. Podemos escrever mais de 
         printf("divisao impossivel\n");
 ```
 
-A divisão será impossível se y for igual a 0 (y == 0), pois não existe divisão por zero. Caso aconteça, escrevemos na tela a mensagem divisao impossivel com o comando `printf`. Se não fazemos a divisão e mostramos o resultado na tela:
+A divisão será impossível se y for igual a 0 (y == 0), pois não existe divisão por zero. Caso aconteça, escrevemos na tela a mensagem "divisao impossivel" com o comando `printf`. Se não fazemos a divisão e mostramos o resultado na tela:
 
 ```c
       else
@@ -43,4 +43,4 @@ A divisão será impossível se y for igual a 0 (y == 0), pois não existe divis
     }
 ```
 
-Aqui nós não mencionamos uma variável para ser escrita no printf, mas sim uma operação (x/y). Além disso precisamos inserir o `(double) ` antes da divisão para mudar o tipo de variável de `int` para `double`, isso é mencionado no enunciado do exercício como "cast" e, ao mudar o tipo, devemos trocar `%d` por `%lf` para mostrar o valor na tela. O `0.1` indica quantas casas decimais serão apresentadas, que no caso é uma.
+Aqui nós não mencionamos uma variável para ser escrita no `printf`, mas sim uma operação (x/y). Além disso precisamos inserir o `(double) ` antes da divisão para mudar o tipo de variável de `int` para `double`, isso é mencionado no enunciado do exercício como "cast" (converte um tipo para outro) e, ao mudar o tipo, devemos trocar `%d` por `%lf` para mostrar o valor na tela. O `0.1` indica quantas casas decimais serão apresentadas, que no caso é uma.

@@ -14,7 +14,7 @@ int X, i;
 scanf("%d", &X);
 ```
 Para imprimir a sequência de 1 até X, vamos utilizar um loop `while` que continuará executando enquanto X for diferente de 0.
-Dentro desse while, precisamos exibir os números de 1 até X na mesma linha, separados por espaço (mas sem espaço depois do último número, conforme o exercício exige).
+Dentro desse `while`, precisamos exibir os números de 1 até X na mesma linha, separados por espaço (mas sem espaço depois do último número, conforme o exercício exige).
 
 Para resolver isso, podemos seguir esta lógica:
 

@@ -10,10 +10,11 @@ Leia uma quantidade indeterminada de duplas de valores inteiros X e Y. Escreva p
 O problema pede a utilização de 2 valores inteiros *X* e *Y*:
 
 ```c
-        float X, Y;
+        int X, Y;
 ```
 
-O exercício pede vários casos de teste sendo cada um deles divididos em valores para *X* e *Y*, para fazer esse tipo de exercício é recomendado usar um `while` em conjunto à um `scanf`. Temos que iniciar lendo as variáveis *X* e *Y* utilizando o `scanf`, isso se dá pela necessidade de iniciar o `while`. Como o exercício pede para ser vários casos de teste, iremos ao fim do loop ler novas entradas:
+O exercício pede vários casos de teste sendo cada um deles divididos em valores para *X* e *Y*, para fazer esse tipo de exercício é recomendado usar um `while` em conjunto à um `scanf`. 
+Temos que iniciar lendo as variáveis *X* e *Y* utilizando o `scanf`, isso se dá pela necessidade de iniciar o `while`. Como o exercício pede para ser vários casos de teste, iremos ao fim do loop ler novas entradas:
 
 ```c
         scanf("%d %d", &X, &Y);
