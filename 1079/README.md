@@ -43,7 +43,7 @@ Por fim, dividimos a soma em `total` por 10.0 para obter a média ponderada fina
 ```c
 media = total/10.0;
 ```
-Exibimos a média ponderada final com a estrutura `printf`. Lembre-se de utilizar o \n no final, pois o URI costuma ser bem exigente com a saída da resolução do problema.
+Exibimos a média ponderada final com a estrutura `printf`. Lembre-se de utilizar o \n no final, pois o Beecrowd costuma ser bem exigente com a saída da resolução do problema.
 
 ```c
 printf("%.1f\n", media);
