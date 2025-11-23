@@ -1,7 +1,8 @@
 # Problema:   
 Na matemática, um Número Primo é aquele que pode ser dividido somente por 1 (um) e por ele mesmo. Por exemplo, o número 7 é primo, pois pode ser dividido apenas pelo número 1 e pelo número 7.
 
-**Problema Completo**: https://www.urionlinejudge.com.br/judge/pt/problems/view/1165
+> Problema Completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1165
+---
 
 
 # Resolução:
@@ -21,7 +22,7 @@ for(i=0; i<nCasos; i++){
             primo = 0;
 	
 ```
-Observe que verificamos aqui se o `valor` recebido é 1 e caso positivo, setamos a variável primo para 0, já que o número 1 não é primo, pois apesar de ser divisível por 1 e ele mesmo, não possui 2 divisores.  
+Observe que verificamos aqui se o `valor` recebido é 1 e caso positivo, a variável primo recebe 0, já que o número 1 não é primo, pois apesar de ser divisível por 1 e ele mesmo, não possui 2 divisores.  
 Após recebido o valor utilizamos a variavel `j` como contador indo de 2 até o valor, verificando a condição de não possuir divisor, o que representa a condição de ser um número primo. Caso encontre um divisor, definimos a variavel `primo` como 0
 ```c
 for(j=2; j<valor; j++)

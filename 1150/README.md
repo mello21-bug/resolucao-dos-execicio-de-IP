@@ -2,7 +2,7 @@
 
 Faça um programa que leia dois inteiros: X e Z (devem ser lidos tantos valores para Z quantos necessários, até que seja digitado um valor maior do que X para ele). Conte quantos números inteiros devem ser somados em sequência (considerando o X nesta soma) para que a soma ultrapasse a Z o mínimo possível. Escreva o valor final da contagem.
 
-##### Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1150
+> Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1150
 
 # Resolução:
 

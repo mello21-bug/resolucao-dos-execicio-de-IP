@@ -1,8 +1,10 @@
-#Problema:
+# Problema:
 
 Faça um programa que leia 6 valores. Estes valores serão somente negativos ou positivos (desconsidere os valores nulos). A seguir, mostre a quantidade de valores positivos digitados.
 
-#Resolução:
+---
+
+# Resolução:
 
 De acordo com o exemplo dado no exercício, os valores dados podem ser reais. Sendo assim, utilizaremos o tipo `float` para eles. Também utilizaremos uma variável do tipo inteiro para contar quantos valores são positivos, que deve ser iniciada com 0. (É importante que sempre uma variável do tipo inteiro utilizada com a função de ser contadora seja inicializada, para não começar com “lixo de memória” e causar resultados incorretos).
 

@@ -7,7 +7,7 @@ São dados:
 
 • as coordenadas de um retângulo que delimita uma fazenda. As linhas que delimitam a fazenda são paralelas aos eixos cartesianos. Sua tarefa é escrever um programa que determine quantos meteoritos caíram dentro da fazenda (incluindo meteoritos que caíram exatamente sobre as linhas que delimitam a fazenda).
 
-##### Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/3068
+> Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/3068
 
 # Resolução:
 
