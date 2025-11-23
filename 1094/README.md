@@ -5,14 +5,15 @@ Este laboratório em especial utiliza três tipos de cobaias: sapos, ratos e coe
 
 Conforme a entrada exemplificada no exercício, "a primeira linha contém um valor inteiro **N** que indica os vários casos de teste que vem a seguir. Cada caso de teste contém um inteiro **Quantia** (1 ≤ Quantia ≤ 15) que representa a quantidade de cobaias utilizadas e um caractere **Tipo** ('C', 'R' ou 'S'), indicando o tipo de cobaia (*R*:Rato *S*:Sapo *C*:Coelho).
 
-**Problema Completo**: https://www.urionlinejudge.com.br/judge/pt/problems/view/1094
+> Problema Completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1094
 
 
 # Resolução:
 Para solucionar este exercício, podemos utilizar a primeira entrada fornecida (quantidade de casos de teste) para limitar um loop, no qual cada caso é lido e seus dados são armazenados separadamente. Ao final, realizamos as contas necessárias para obter o resultado.
 
 Como já sugerido pelo enunciado, criamos as variáveis inteiras `N` e `Quantia` para conter, respectivamente, o número de casos de teste e a quantidade de cobaias a serem fornecidos na entrada. Além disso, é necessário uma variável do tipo `char` para armazenar a sigla fornecida no caso de teste e, como exemplificado, será nomeada `Tipo`.   
-Visto que o resultado exigirá a soma da quantia de cada cobaia, bem como o total, declaramos 4 variáveis `int` para guardar cada um destes valores. Vale destacar que devem ser inicializados com 0 para não prejudicar o incremento que será realizado posteriormente.
+Visto que o resultado exigirá a soma da quantia de cada cobaia, bem como o total, declaramos 4 variáveis `int` para guardar cada um destes valores. 
+Vale destacar que devem ser inicializados com 0 para não prejudicar o incremento que será realizado posteriormente.
 Também é necessário uma do tipo `float` (pois exigiu-se a representação com casas decimais), em que será armazenado o percentual obtido.
 
 ```c
@@ -37,16 +38,16 @@ O mesmo cenário ocorre para as demais cobaias no caso em que o caractere seja *
 
 ```c
 if(Tipo == 'C'){
-  coelhos = coelhos + Quantia;
-}
+      coelhos += Quantia;
+    }
 
-if(Tipo == 'R'){
-  ratos = ratos + Quantia;
-}
+    if(Tipo == 'R'){
+      ratos += Quantia;
+    }
 
-if(Tipo == 'S'){
-  sapos = sapos + Quantia;
-}
+    if(Tipo == 'S'){
+      sapos += Quantia;
+    }
 }//chave referente ao término do laço for
 ```
 
@@ -61,8 +62,9 @@ printf("Total de ratos: %d\n",ratos);
 printf("Total de sapos: %d\n",sapos);
 ```
 
-Usufruímos da variável `percentual` para guardar, periodicamente, a porcentagem de cada cobaia diante do total obtido. Para isto, realizamos o [cálculo da porcentagem](https://www.todamateria.com.br/calcular-porcentagem/) através da multiplicação da cobaia em questão por 100.00 e, em seguida, a divisão pelo `total`. É importante que o número seja representado de forma decimal para que o resultado obtido também seja um número decimal, uma vez que isto foi exigido pelo exercício.
-Logo depois, o resultado percentual obtido pode ser mostrado na tela através do `printf()`, o qual deverá conter como argumento `%.2f`, pois isto garante que o valor `float` será exibido com 2 casas após o ponto. Vale destacar, também, a utilização de `%%` propositalmente duplicada para que a função saiba que não se trata de um argumento e, assim, exibirá o caractere % na tela.
+Usufruímos da variável `percentual` para guardar, periodicamente, a porcentagem de cada cobaia diante do total obtido. Para isto, realizamos o cálculo da porcentagem através da multiplicação da cobaia em questão por 100.00 e, em seguida, a divisão pelo `total`. É importante que o número seja representado de forma decimal para que o resultado obtido também seja um número decimal, uma vez que isto foi exigido pelo exercício.
+Logo depois, o resultado percentual obtido pode ser mostrado na tela através do `printf()`, o qual deverá conter como argumento `%.2f`, pois isto garante que o valor `float` será exibido com 2 casas após o ponto.
+Vale destacar, também, a utilização de `%%` propositalmente duplicada para que a função saiba que não se trata de um argumento e, assim, exibirá o caractere % na tela.
 Este mesmo procedimento é feito para cada uma das cobaias existentes, sendo importante projetar a saída antes que `percentual` seja sobrescrito para a próxima cobaia.
 
 ```c

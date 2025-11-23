@@ -6,7 +6,7 @@ Escreva um programa que repita a leitura de uma senha até que ela seja válida.
 ---
 # Resolução:
 
-O objetivo desse exercício é ler uma senha, verificar se é 2002 e, caso seja, mostrar na tela a mensagem Acesso Permitido e encerrar o programa. Caso não seja, mostrar na tela Senha Invalida e repetir o processo.
+O objetivo desse exercício é ler uma senha, verificar se é 2002 e, caso seja, mostrar na tela a mensagem "Acesso Permitido" e encerrar o programa. Caso não seja, mostrar na tela "Senha Invalida" e repetir o processo.
 
 Nesse exercício vamos declarar uma variável do tipo `int` chamado de `senha`:
 

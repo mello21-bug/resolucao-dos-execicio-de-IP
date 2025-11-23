@@ -13,15 +13,15 @@ int main() {
     scanf("%d %c",&Quantia,&Tipo);
 
     if(Tipo == 'C'){
-      coelhos = coelhos + Quantia;
+      coelhos += Quantia;
     }
 
     if(Tipo == 'R'){
-      ratos = ratos + Quantia;
+      ratos += Quantia;
     }
 
     if(Tipo == 'S'){
-      sapos = sapos + Quantia;
+      sapos += Quantia;
     }
   }
 

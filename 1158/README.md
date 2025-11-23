@@ -23,9 +23,9 @@ Tendo a variável declarada, podemos receber quantos casos de teste faremos util
 
 Como temos o número de casos armazenado em `N`, fazemos um loop `for` para contar quantos casos de teste já efetuamos. Podemos dividir essa etapa em 3:
 
-1. Recebemos do usuário os dois inteiros `X` e `Y` e zeramos a variável `soma` para o resultado do caso de teste anterior não atrapalhar o atual.
-2. Efetuamos o processo de soma (que é o coração do problema)
-3. Escrevemos na tela o resultado da soma, armazenado na variável de mesmo nome.
+- Recebemos do usuário os dois inteiros `X` e `Y` e zeramos a variável `soma` para o resultado do caso de teste anterior não atrapalhar o atual.
+- Efetuamos o processo de soma.
+- Escrevemos na tela o resultado da soma, armazenado na variável de mesmo nome.
 
 ```c
     for(i = 0; i < N; i++){

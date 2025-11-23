@@ -1,29 +1,27 @@
 # Problema:
+
 Escreva um programa para ler as notas da primeira e a segunda avaliação de um aluno. Calcule e imprima a média semestral. O programa só deverá aceitar notas válidas (uma nota válida deve pertencer ao intervalo [0,10]). Cada nota deve ser validada separadamente.
 
-No final deve ser impressa a mensagem “novo calculo (1-sim 2-nao)”, solicitando ao usuário que informe (1 ou 2) indicando se ele deseja ou não executar o algoritmo novamente, (aceitar apenas os código 1 ou 2). Se for informado o código 1 deve ser repetida a execução de todo o programa para permitir um novo cálculo, caso contrário o programa deve ser encerrado.
+No final deve ser impressa a mensagem “novo calculo (1-sim 2-nao)”, solicitando ao usuário que informe um código (1 ou 2) indicando se ele deseja ou não executar o algoritmo novamente, (aceitar apenas os código 1 ou 2). Se for informado o código 1 deve ser repetida a execução de todo o programa para permitir um novo cálculo, caso contrário o programa deve ser encerrado.
 
 > Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1118
 ---
 
 # Resolução:
 
-Esse execício pede um programa que calcule a média entre duas notas, sendo que essas notas devem estar entre 0 e 10. Para isso você deve conferir se os dois valores escritos estão entre 0 e 10 antes de calcular a média. No entanto, o código desse exercício deve ser capaz de fazer um novo cálculo sempre que responder 1 depois da mensagem novo calculo (1-sim 2-nao), ou seja, a repetição pode ocorrer quantas vezes o usuário quiser.
+Existem inúmeras formas de fazer o exercício. No entanto, se o tempo de execução do código for muito extenso, resultará em `runtime error` e o seu código não será aceito. Então temos que fazer o código usando o menor número de laços de repetição e comparações possível.
 
 Para começar, criaremos quatro variáveis, sendo três do tipo `double` e uma do tipo `int`:
-
 ```c
     double nota, media, nro_notas;
     int x;
 ```
 Depois de criar as variáveis, iremos igualar `media` e `nro_notas` a 0. Isso será importante para algumas comparações a seguir.
-
 ```c
     media = 0;
     nro_notas = 0;
 ```
 Agora, para iniciar a repetição que permitirá ao usuário fazer quantos cálculos quiser, usaremos a função `while`:
-
 ```c
     while(1) {
 ```
@@ -61,7 +59,7 @@ Para apresentar o valor obtido, escrevemos o resultado na tela utilizando a fun�
           printf("media = %0.2lf\n", media);
           printf("novo calculo (1-sim 2-nao)\n");
 ```
-`%0.2lf` será substituido pelo valor contido em media. O `0.2` indica quantas casas decimais serão mostradas na tela, que no caso é uma. O `\n` no fim serve para pular uma linha na tela depois de mostrar o dado. Além da resposta, também mostramos na tela a opção de fazer um novo cálculo e dar continuidade ao programa.
+`%0.2lf` será substituido pelo valor contido em media. O `0.2` indica quantas casas decimais serão mostradas na tela. O `\n` no fim serve para pular uma linha na tela depois de mostrar o dado. Além da resposta, também mostramos na tela a opção de fazer um novo cálculo e dar continuidade ao programa.
 
 Para saber se teremos um novo cálculo ou não, vamos criar outro `while(1)`, pois também precisamos verificar se a resposta para um novo cálculo é válida ou não. Dentro do laço vamos ler a variável `x`: 
 ```c
