@@ -1,18 +1,18 @@
- #include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int n[10], i, v;
+    int n[10], i;
 
-    scanf("%d", &v);
+    scanf("%d", &n[0]);
+     printf("N[%d] = %d\n", 0, n[0]);
     
-    for(i=0; i<=9; i++)
+    for(i=1; i<=9; i++)
     {
-        n[i]=v;
+        n[i]=n[i-1]*2;
 
-        printf("N[%d] = %d\n",i,v);
+        printf("N[%d] = %d\n", i, n[i]);
 
-        v=v*2;
     }
     return 0;
 }

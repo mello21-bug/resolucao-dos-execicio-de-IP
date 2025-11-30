@@ -2,7 +2,7 @@
 
 Faça um programa que leia um vetor A[100]. No final, mostre todas as posições do vetor que armazenam um valor menor ou igual a 10 e o valor armazenado em cada uma das posições.
 
-###### Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1174
+> Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1174
 
 # Resolução 
 
@@ -15,18 +15,12 @@ O vetor `a[100]` de 100 posições será do tipo `double`, visto que os valores 
     double A[100];
 ````
 
-A outra variável será o contador de loops da estrutura de repetição.
-
-````c
-    int i;
-````
-
 A seguir, faremos a primeira estrutura de repetição `for`.
 A variável `i` será nosso contador da estrutura, para contabilizar quantas vezes a repetição ocorre. 
-Primeiro, ela começa com o valor = 0. Os valores que ela poderá obter são menores que 100, visto que o vetor tem 100 posições e inicia-se em 0. Para que mude de valor, `i` será incrementada toda vez que uma repetição ocorrer, que faremos com `i++` (que funciona de forma similar a `i = i + 1`. Cada uma dessas condições é representada dentro da estrutura `for`.
+Primeiro, ela começa com o valor = 0. Os valores que ela poderá obter são menores que 100, visto que o vetor tem 100 posições e inicia-se em 0. Para que mude de valor, `i` será incrementada toda vez que uma repetição ocorrer, que faremos com `i++` (que funciona de forma similar a `i = i + 1`). Cada uma dessas condições é representada dentro da estrutura `for`.
 
 ````c
-    for(i=0; i<100; i++)
+    for(int i=0; i<100; i++)
 ````
 
 Em seguida, iremos ler os 100 valores e alocaremos em cada posição do vetor representada por `i` com a estrutura `scanf`.

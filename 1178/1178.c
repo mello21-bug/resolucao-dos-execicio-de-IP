@@ -4,7 +4,7 @@ int main() {
 	double X, N[100];
 	int i;
 	
-	scanf("%lf",&X);
+	scanf("%lf",&N[0]);
 	
 	N[0] = X;
 	printf("N[0] = %.4lf\n",N[0]);

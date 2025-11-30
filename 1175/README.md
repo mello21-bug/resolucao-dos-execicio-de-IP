@@ -22,9 +22,10 @@ Portanto a saída do exercício fica com essa característica:
                                 N[18] = -5
                                 N[19] = 0
 
-Iremos iniciar o exercício declarando as variáveis que iremos usar, incluindo o [vetor](http://linguagemc.com.br/vetores-ou-arrays-em-linguagem-c/#:~:text=O%20vetor%20é%20uma%20estrutura,inteiro%20denominado%20índice%20do%20vetor.) `N[20]` que também deve possuir um tipo e no caso do exercício em questão é `int`:
+Iremos iniciar o exercício declarando as variáveis que iremos usar, incluindo o `N[20]` que também deve possuir um tipo e no caso do exercício em questão é `int`:
 ```c
-        int N[20], aux,i, j;
+    int N[20];
+    int i, temp;    
 ```
 Faremos a leitura dos valores que o vetor `N[20]` irá receber:
 
@@ -32,22 +33,22 @@ Faremos a leitura dos valores que o vetor `N[20]` irá receber:
         for(i=0; i<20; i++)
                 scanf("%d",&N[i]);
 ```
-Damos sequência para onde a lógica do exercício se estabelece. Iniciamos fazendo a atribuição `j=19` , com intuito de podermos acessar a última posição do vetor `N`, e depois seguimos para o `for`:
+Damos sequência à lógica do exercício realizando as trocas entre as posições do vetor. Primeiro, usamos a variável `temp` para armazenar temporariamente o valor atual de `N[i]`. Em seguida, fazemos `N[i] = N[19 - i];`, o que coloca na posição inicial o elemento correspondente da extremidade final do vetor. Por fim, recuperamos o valor salvo em `temp` e o colocamos na posição` N[19 - i]`.
+
+Essa lógica garante que o primeiro elemento seja trocado com o último, o segundo com o penúltimo, e assim por diante. Usar `19 - i` assegura que acessamos corretamente as posições finais do vetor de forma decrescente.
+
+O loop vai somente até `i < 10` porque, ao realizar as primeiras 10 trocas, já teremos invertido todas as posições necessárias. Como o vetor tem 20 elementos, cada troca envolve duas posições; portanto, após 10 iterações, todas as posições já foram permutadas sem que nenhuma seja alterada duas vezes.
 
 ```c
-        j=19;
-        for(i=0; i<10; i++)
-        {
-                aux=N[i];
-                N[i]=N[j];
-                N[j]=aux;
-                j--;
-        }
+      for (i = 0; i < 10; i++) {
+        temp = N[i];
+        N[i] = N[19 - i];
+        N[19 - i] = temp;
+    }
+  
 
     
 ```
-No `for` será feita uma troca de variável padrão utilizando uma variável `aux` como auxiliar. A única diferença de uma troca padrão de variável é que estamos trabalhando com vetor, então precisamos ficar atentos à posição do mesmo. Para isso utilizamos ambas as variáveis `i` e `j`, sendo `i` a que irá percorrer o vetor do inicio `N[0]` e `j` como explicado anteriormente do final `N[19]`. Repare que o `for` só percorre metade do vetor `N[20]`, devido à condição de parada explicada no início do exercício: ponto médio.
-
 E, para finalizar, precisamos mostrar a saída. Para isso devemos utilizar um `for` para percorrer todo o vetor, printando em cada posição (representada por `i`):
 
 ```c
