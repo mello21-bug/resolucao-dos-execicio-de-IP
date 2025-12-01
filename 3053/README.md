@@ -18,78 +18,127 @@ Nesta tarefa, dadas a descrição da sequência de movimentos e a posição inic
  
 # Resolução:
  
-Para determinar a posição final da moeda após todos os movimentos, após determinarmos o estado inicial, trocamos a moeda de lugar, a cada movimento lido. Ao fim de todos os movimentos, imprimimos qual copo a moeda está.
+Para resolver o problema, representamos os três copos em um vetor de três posições.
+Cada posição do vetor corresponde diretamente a um copo:
 
-Iremos declarar uma variável do tipo inteiro `N`, indicando o número de movimentos, um caracter `moeda`, indicando o copo inicial da moeda, um vetor de 3 caracteres `copos[3]`, para representar os copos A, B e C,** em ordem**, um caracter `aux`, para auxiliar na troca de copo da moeda e duas variáveis do tipo inteiro, `movimento` e `i`. A variável `movimento` será utilizada na leitura do movimento a ser realizado e `i` será utilizada nos laços de repetição.
+posição 0 = A
+posição 1 = B
+posição 2 = C
+
+No início, marcamos todos os copos como vazios ('-'), e apenas o copo que contém a moeda recebe o caractere 'X'. Esse 'X' representa a moeda. Assim, sempre que ocorre uma troca de copos, a moeda também "viaja" junto, pois estamos trocando as posições do vetor.
+
+Após ler todos os movimentos, basta verificar qual posição contém o 'X' para determinar qual copo possui a moeda no final.
 
 ```c
+
 int N;
 char moeda;
 
-char copos[3], aux;
+char copos[3] = {'-', '-', '-'}, aux;
 int movimento, i;
 ```
 
-Depois, lemos o número de movimentos `N` e o copo inicial em que a moeda está `moeda`. Utilizamos "%s" na leitura de `moeda` pois "%c" ou "%[^\n]" levam a erro por motivos desconhecidos.
+`N`: quantidade de movimentos.
+
+`moeda`: letra que indica o copo inicial da moeda (A, B ou C).
+
+`copos[3]`: vetor de três posições que representa os copos. Inicialmente todos são '-', pois estão vazios.
+
+`aux`: variável auxiliar usada para realizar trocas entre posições.
+
+`movimento`: número do movimento lido.
+
+`i`: contador para laços.
+
+
+Agora, realizamos a leitura de quantos movimentos serão feitos e em qual copo a moeda irá começar:
 
 ```c
 scanf("%d", &N);
-scanf("%s", &moeda);
+scanf(" %c", &moeda);
 ```
 
-Em seguida, definimos o estado inicial dos copos, utilizando a estrutura condicional `if`, conforme o valor lido de `moeda`. Caso seja `A`, significa que a moeda está no copo A. De forma análoga, ocorre o mesmo caso o valor seja `B` ou `C`.
+Para marcar onde a moeda se encontra, usamos uma técnica simples:
+converter a letra (A, B ou C) em índice numérico. 
 
 ```c
-if(moeda == 'A')
-	copos[0] = 'A';
-			
-else if( moeda == 'B')
-	copos[1] = 'B';
-			
-else if( moeda == 'C')
-	copos[2] = 'C';
+copos[moeda - 'A'] = 'X';
 ```
 
-Depois, realizaremos `N` movimentos de troca e, para isso, utilizaremos o laço de repetição `for`. A cada iteração do laço, lemos o movimento a ser realizado por meio da função `scanf()` e, de acordo com o movimento lido, trocamos a moeda de lugar:
-- Se o movimento lido for `1`, trocamos o conteúdo do copo A (`copos[0]`) pelo do copo B (`copos[1]`), utilizando um auxiliar `aux`.
-- Se o movimento lido for `2`, trocamos o conteúdo do copo B (`copos[1]`) pelo do copo C (`copos[2]`), utilizando um auxiliar `aux`.
-- Se o movimento lido for `3`, trocamos o conteúdo do copo A (`copos[0]`) pelo do copo C (`copos[2]`), utilizando um auxiliar `aux`.
+Aqui acontece algo muito importante:
 
+'A' tem código ASCII 65
+
+'B' é 66
+
+'C' é 67
+
+Quando fazemos `moeda - 'A'`, Isso vira:
+
+'A' - 'A' = 0 → posição 0 (65-65)
+
+'B' - 'A' = 1 → posição 1 (66-65)
+
+'C' - 'A' = 2 → posição 2 (67-65)
+
+
+Então o código marca a posição da moeda assim:
+
+Copo A → copos[0] = 'X'
+
+Copo B → copos[1] = 'X'
+
+Copo C → copos[2] = 'X'
+
+---
+Sabendo disso, entramos em um laço de repetição para indicar qual movimento será realizado. Tendo noção que indicaremos qual passo iremos realizar por 1, 2 e 3, podemos fazer um switch.
 
 ```c
-for(i = 0; i < N; i++){
-	scanf("%d", &movimento);
-		
-	if( movimento == 1){
+for(i = 0; i < N; i++) {
+    scanf("%d", &movimento);
 
-		aux = copos[0];
-		copos[0] = copos[1];
-		copos[1] = aux; 
+    switch (movimento) {
+        case 1: // A <-> B
+            aux = copos[0];
+            copos[0] = copos[1];
+            copos[1] = aux;
+            break;
 
-	}else if(movimento == 2){
-		    
-	    aux = copos[1];
-		copos[1] = copos[2];
-		copos[2] = aux;
-			
-	}else if(movimento == 3){
+        case 2: // B <-> C
+            aux = copos[1];
+            copos[1] = copos[2];
+            copos[2] = aux;
+            break;
 
-		aux = copos[0];
-		copos[0] = copos[2];
-		copos[2] = aux;
-	}
-
+        case 3: // A <-> C
+            aux = copos[0];
+            copos[0] = copos[2];
+            copos[2] = aux;
+            break;
+    }
 }
 ```
 
-Em seguida, imprimimos o resultado. Para isto, iremos utilizar um laço de repetição `for`, para percorrer o vetor `copos`. A cada iteração, verificamos se o valor contido no endereço atual, `copos[i]` é `A` ou `B` ou `C`.
-Porém, ao invés de exibirmos este valor (A ou B ou C), iremos trabalhar com o endereço do vetor, pois este sim indica qual a posição em que a moeda está. Caso qualquer letra lida esteja no endereço 0, significa que a moeda está no copo A e que letra a ser exibida é `A`.
+Se a moeda estiver em um dos copos trocados, ela muda de posição automaticamente, pois estamos trocando o conteúdo das posições do vetor.
 
-**Para imprimir um caracter a partir de um número inteiro, utilizaremos a tabela ASCII. Nesta tabela, o caracter `A` é representado pelo número decimal `65`, o caracter `B` é representado pelo número decimal `66` e assim por diante, logo, o caracter `C` é representado pelo número decimal `67`. Por isso, para exibirmos em qual copo a moeda está, utilizamos a função `printf("%c\n", i + 65)`.**
+Após todas as trocas, basta encontrar em qual posição está a moeda ('X'), e imprimos a posição encontrada:
 
 ```c
-for(i = 0; i < 3; i++)
-	if(copos[i] == 'A' || copos[i] == 'B' || copos[i] == 'C')
-	    printf("%c\n", i + 65);
+for(i = 0; i < 3; i++){
+    if(copos[i] == 'X'){
+        printf("%c\n", 'A' + i);
+    }
+}
 
 ```
+Aqui usamos novamente a correspondência entre índice e letra:
+
+índice 0 → 'A' + 0 = 'A'
+
+índice 1 → 'A' + 1 = 'B'
+
+índice 2 → 'A' + 2 = 'C'
+
+Portanto, imprimimos exatamente o copo onde a moeda se encontra.
+
+

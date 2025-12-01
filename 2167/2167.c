@@ -6,9 +6,9 @@ int main() {
     
     scanf("%d", &N);
     
-    for(i=0;i<N;i++)
+    for(i=0;i<N;i++) {
         scanf("%d", &R[i]);
-    
+    }
     for(i=1;i<N;i++) {
         if (R[i-1] > R[i]) {
             printf("%d\n", i+1);

@@ -1,9 +1,8 @@
 # Problema:
 Leia um caractere maiúsculo, que indica uma operação que deve ser realizada e uma matriz M[12][12]. Em seguida, calcule e mostre a soma ou a média considerando somente aqueles elementos que estão acima da diagonal principal da matriz, conforme ilustrado abaixo (área verde).
  
-![Matriz](https://resources.urionlinejudge.com.br/gallery/images/problems/UOJ_1183.png)
  
-##### Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/1183
+> Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/1183
  
  
 # Resolução:

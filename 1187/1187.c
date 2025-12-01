@@ -22,9 +22,7 @@ int main() {
 
     if (O == 'S') {
         printf("%.1lf\n", total);
-    }
-
-    else if (O == 'M') {
+    } else if (O == 'M') {
         total = total / 30.0;
         printf("%.1lf\n", total);
     }

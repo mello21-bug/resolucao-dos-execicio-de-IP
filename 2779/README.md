@@ -7,7 +7,7 @@ Para ajudar os usuários, a empresa responsável pela venda do álbum e das figu
 
 Dados o número total de espaços e figurinhas do álbum, e uma lista das figurinhas já compradas (que pode conter figurinhas repetidas), sua tarefa é determinar quantas figurinhas faltam para completar o álbum.
  
-##### Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/2779
+> Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/2779
  
  
 # Resolução:

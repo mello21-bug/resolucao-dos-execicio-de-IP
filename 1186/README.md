@@ -3,7 +3,7 @@ Leia um caractere maiúsculo, que indica uma operação que deve ser realizada e
  
 ![Matriz](https://resources.urionlinejudge.com.br/gallery/images/problems/UOJ_1186.png)
  
-##### Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/1186
+> Link do problema: https://www.urionlinejudge.com.br/judge/pt/problems/view/1186
  
  
 # Resolução:

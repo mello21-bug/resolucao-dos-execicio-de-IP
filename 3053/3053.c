@@ -2,53 +2,52 @@
 
 int main (){
 
-	int N;
-	char moeda;
+    int N;
+    char moeda;
 
-	char copos[3], aux;
-	int movimento, i;
+    // Copos começam vazios
+    char copos[3] = {'-', '-', '-'}, aux;
+    int movimento, i;
 
-	scanf("%d", &N);
-	scanf("%s", &moeda);
+    scanf("%d", &N);      // quantidade de movimentos
+    scanf(" %c", &moeda); // copo inicial da moeda
 
-	if(moeda == 'A')
-		copos[0] = 'A';
-			
-	else if( moeda == 'B')
-		copos[1] = 'B';
-			
-	else if( moeda == 'C')
-		copos[2] = 'C';
-	
+    // Coloca a moeda no copo inicial
+    copos[moeda - 'A'] = 'X';
 
-	for(i = 0; i < N; i++){
-		scanf("%d", &movimento);
-		
-		if( movimento == 1){
+    // Processa os movimentos
+    for(i = 0; i < N; i++) {
 
-			aux = copos[0];
-			copos[0] = copos[1];
-			copos[1] = aux; 
+        scanf("%d", &movimento);
 
-		}else if(movimento == 2){
-		    
-		    aux = copos[1];
-			copos[1] = copos[2];
-			copos[2] = aux;
-			
-		}else if(movimento == 3){
+        switch (movimento) {
+            case 1: // troca A ↔ B
+                aux = copos[0];
+                copos[0] = copos[1];
+                copos[1] = aux;
+                break;
 
-			aux = copos[0];
-			copos[0] = copos[2];
-			copos[2] = aux;
-		}
+            case 2: // troca B ↔ C
+                aux = copos[1];
+                copos[1] = copos[2];
+                copos[2] = aux;
+                break;
 
-	}
+            case 3: // troca A ↔ C
+                aux = copos[0];
+                copos[0] = copos[2];
+                copos[2] = aux;
+                break;
+        }
+    }
 
-	for(i = 0; i < 3; i++)
-	    if(copos[i] == 'A' || copos[i] == 'B' || copos[i] == 'C')
-	        printf("%c\n", i + 65);
-	
+    // Procura onde a moeda terminou
+    for(i = 0; i < 3; i++){
+        if(copos[i] == 'X'){
+            printf("%c\n", 'A' + i);
+        }
+    }
 
-return 0;
+    return 0;
 }
+

@@ -1,53 +1,37 @@
 #include <stdio.h>
 
-int main()
-{
-   int N, i, j, pivo, minclassificados;
-   scanf("%d", &N);
-   int Participantes[N];
-   
-   int numpassou;
-   scanf("%d", &numpassou);
+int main() {
+    int N, K;
+    int i, j, temp;
+    int pontos[1005];
 
+    scanf("%d", &N);
+    scanf("%d", &K);
 
+    for (i = 0; i < N; i++) {
+        scanf("%d", &pontos[i]);
+    }
 
-   for (i = 0; i < N; i++)
-   {
-      scanf("%d", &Participantes[i]);
-   }
-   
+    // Ordenar em ordem decrescente (bubble sort simples)
+    for (i = 0; i < N-1; i++) {
+        for (j = 0; j < N-1-i; j++) {
+            if (pontos[j] < pontos[j+1]) {
+                temp = pontos[j];
+                pontos[j] = pontos[j+1];
+                pontos[j+1] = temp;
+            }
+        }
+    }
 
-   i = 1;
-   while (i < N)
-	{
+    int pontoCorte = pontos[K-1]; // pontuação do K-ésimo colocado
+    int classificados = 0;
 
-		j = i - 1;
-		pivo = Participantes[i];
+    for (i = 0; i < N; i++) {
+        if (pontos[i] >= pontoCorte)
+            classificados++;
+    }
 
-		while (j >= 0 && Participantes[j] < pivo)
-		{
+    printf("%d\n", classificados);
 
-			Participantes[j + 1] = Participantes[j];
-			j--;
-
-		}
-
-		Participantes[j + 1] = pivo;
-		i++;
-
-	}
-
-   j=numpassou;
-   i=numpassou - 1;
-
-   minclassificados=numpassou;
-
-   while (Participantes[j++] == Participantes[i])
-   {
-         minclassificados++;                                         
-   }
-   
-   printf("%d\n", minclassificados);
-
-   return 0;
+    return 0;
 }

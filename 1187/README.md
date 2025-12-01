@@ -1,9 +1,8 @@
 # Problema:    
 Leia um caractere maiúsculo, que indica uma operação que deve ser realizada e uma matriz M[12][12]. Em seguida, calcule e mostre a soma ou a média considerando somente aqueles elementos que estão na área superior da matriz, conforme ilustrado abaixo (área verde).
 
-<img src="https://resources.urionlinejudge.com.br/gallery/images/problems/UOJ_1187.png">
 
-**Problema completo**: https://www.urionlinejudge.com.br/judge/pt/problems/view/1187
+> Problema completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1187
 
 
 # Resolução:

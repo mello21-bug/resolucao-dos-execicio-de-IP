@@ -15,10 +15,11 @@ int main (){
 		album[aux] = 1;
 	}
 
-	for (i = 1; i <= qtdTotal; i++)
-		if (!album[i])
+	for (i = 1; i <= qtdTotal; i++){
+		if (!album[i]){
 			faltam++;
-
+		}
+	}
 	printf("%d\n", faltam);
 
 return 0;

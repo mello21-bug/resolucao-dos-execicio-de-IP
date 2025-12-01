@@ -1,7 +1,7 @@
 # Problema:
 Faça um programa que leia um valor N. Este N será o tamanho de um vetor X[N]. A seguir, leia cada um dos valores de X, encontre o menor elemento deste vetor e a sua posição dentro do vetor, mostrando esta informação.
 
-**Problema Completo**: https://www.urionlinejudge.com.br/judge/pt/problems/view/1180
+> Problema Completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/1180
 
 
 # Resolução:
@@ -26,21 +26,27 @@ Em seguida, realizamos o loop `for` iterando de acordo com as `N` próximas entr
 for(i=0;i<N;i++){
 		scanf("%d",&X[i]);
   ...
-}//chave referente ao laço for
+}
 ```
-
-Como próximo passo, aplica-se a estrutura de decisão `if` para verificar qual valor é menor: o que está guardado na posição corrente do vetor ou aquele cujo índice está contido em `posicao`. Caso seja o primeiro, as variáveis são atualizadas para que contenham os novos dados correspondentes ao menor valor. Em cenário contrário, `else` garante que o valor continue o mesmo e a posição deste não seja alterada.
+Antes de começar as comparações, o programa assume que o menor valor é o primeiro elemento do vetor.
+A variável posicao é inicializada como 0, indicando que até o momento o menor valor está na posição 0
 
 ```c
-  if(X[i] < X[posicao]){
-    menorValor = X[i];
-    posicao = i;
-  }
+    menorValor = X[0]; 
+```
 
-  else{
-    menorValor = X[posicao];
-  }
-}//chave referente ao laço for
+A partir do segundo elemento (i = 1), o programa compara cada número com o menor valor já encontrado:
+
+Se encontrar um número menor, atualiza menorValor. Também atualiza posição com o índice em que esse menor valor foi encontrado.
+
+```c
+ for (int i = 1; i < N; i++) {
+        if (X[i] < menorValor) {
+            menorValor = X[i];
+            posicao = i;
+        }
+    }
+
 ```
 
 Por fim, basta que sejam exibidos na tela (utilizando-se `printf()`) o menor valor encontrado e a posição deste no vetor. Vale destacar que é essencial inserir na função de saída os textos "Menor valor:" e "Posicao: ", como exemplificado no exercício.

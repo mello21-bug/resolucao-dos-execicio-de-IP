@@ -9,26 +9,17 @@ int main() {
     scanf("%d %d",&L,&C);
 
     for ( i=0; i<L; i++ ) {
-        for ( j=0; j<C; j++ )
-        {
-            if (i % 2 == 1){
-                if (j % 2 == 1)
-                {
+        for ( j=0; j<C; j++){
+            if (i % 2 == 1) {
+                if (j % 2 == 1) {
                     matriz[i][j] = 1 ;
-                }
-                else
-                {
+                } else{
                     matriz[i][j] = 0 ;
                 }
-            }
-            else if (i % 2 == 0)
-            {
-                if (j % 2 == 1)
-                {
+            } else if (i % 2 == 0){
+                if (j % 2 == 1){
                     matriz[i][j] = 0 ;
-                }
-                else
-                {
+                } else {
                     matriz[i][j] = 1 ;
                 }
             }

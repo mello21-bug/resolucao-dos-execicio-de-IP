@@ -6,7 +6,7 @@ O seu professor gostaria de fazer um programa com as seguintes características:
 3. Imprima o sétimo nome da lista;
 4. Imprima o nono nome da lista.
 
-**Problema Completo**: https://www.urionlinejudge.com.br/judge/pt/problems/view/2766
+> Problema Completo: https://www.urionlinejudge.com.br/judge/pt/problems/view/2766
 
 # Resolução:
 
