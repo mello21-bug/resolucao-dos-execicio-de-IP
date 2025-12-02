@@ -56,7 +56,7 @@ Feito o cálculo, temos que escolher qual posição de `cafe[]` em que os funcio
 
 Para isso, vamos assumir que o valor de `cafe[0]` é o menor e vamos compará-lo com as outras duas posições. Caso nosso `menor` seja maior que alguma posição, trocamos o valor de `menor` para o dessa posição.
 
-Terminamos com o `printf` da variável `menor` pedida pelo URI:
+Terminamos com o `printf` da variável `menor` pedida pelo Beecrowd:
 
 ```c
        printf("%d\n", menor);

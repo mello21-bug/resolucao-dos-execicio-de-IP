@@ -21,11 +21,15 @@ Depois de criar as variáveis, iremos igualar `media` e `nro_notas` a 0. Isso se
     media = 0;
     nro_notas = 0;
 ```
-Agora, para iniciar a repetição que permitirá ao usuário fazer quantos cálculos quiser, usaremos a função `while`:
+Agora, para iniciar a repetição que permitirá ao usuário fazer quantos cálculos quiser, usaremos a função `do - while`:
 ```c
-    while(1) {
+    do {
+      ...
+
+    }while (x!=2);
 ```
-Esse `while` não possui condição alguma para sair do laço. Assim a repetição ocorre até que o programa seja encerrado com uma função como `return`, por exemplo. Isso é feito para evitar comparações sempre que um ciclo se encerra, cada comparação custa tempo para ser feito e precisamos criar um algoritmo rápido nesse exercício.
+Enquanto o usuario não digitar a opção 2, o progrma irá continuar.
+
 
 A primeira coisa a ser feita no ciclo é ler um valor usando a função `scanf`:
 ```c
@@ -61,23 +65,24 @@ Para apresentar o valor obtido, escrevemos o resultado na tela utilizando a fun�
 ```
 `%0.2lf` será substituido pelo valor contido em media. O `0.2` indica quantas casas decimais serão mostradas na tela. O `\n` no fim serve para pular uma linha na tela depois de mostrar o dado. Além da resposta, também mostramos na tela a opção de fazer um novo cálculo e dar continuidade ao programa.
 
-Para saber se teremos um novo cálculo ou não, vamos criar outro `while(1)`, pois também precisamos verificar se a resposta para um novo cálculo é válida ou não. Dentro do laço vamos ler a variável `x`: 
+Para saber se teremos um novo cálculo ou não, vamos criar outro `do - while` e a condição de parada será `while (x<1 || x>2);` pois também precisamos verificar se a resposta para um novo cálculo é válida ou não. Dentro do laço vamos ler a variável `x`: 
 ```c
-          while(1) {
+          do {
             scanf("%d",&x);
+            ...
+          } while (x<1 || x>2);
 ```
-Aqui as únicas respostas que podem ser aceitas são 1 ou 2. Qualquer outra deve resultar na repetição da pergunta. Temos que usar novamente a função `if` e `else` para verificar a resposta dada. No `if`, se `x` for igual a 1 (`x == 1`), significa que um novo cálculo vai ser feito. Para iniciar um novo cálculo, temos que igualar as variáveis `media` e `nro_notas` a 0 de novo e o código descrito acima irá se repetir. O `break` é um comando de parada que faz o código voltar ao começo do primeiro `while(1)` mais rápido:
+Aqui as únicas respostas que podem ser aceitas são 1 ou 2. Qualquer outra deve resultar na repetição da pergunta. Temos que usar novamente a função `if` e `else` para verificar a resposta dada. No `if`, se `x` for igual a 1 (`x == 1`), significa que um novo cálculo vai ser feito. Para iniciar um novo cálculo, temos que igualar as variáveis `media` e `nro_notas` a 0 de novo e o código descrito acima irá se repetir.
 ```c
             if(x == 1) {
               media = 0;
               nro_notas = 0;
-              break;
             }
 ```
-Se a resposta obtida for 2 (`x == 2`), significa que um novo cálculo não será feito e o programa será encerrado. Para encerrar o programa usamos a função `return 0;`:
+Se a resposta obtida for 2 (`x == 2`), significa que um novo cálculo não será feito e o programa será encerrado.
 ```c
             else if(x == 2)
-              return 0;
+              
 ```
 Se a resposta presente em `x` não for válida, a pergunta vai aparecer novamente na tela e a variável será lida de novo:
 ```c

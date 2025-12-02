@@ -18,9 +18,9 @@ int main() {
 
         soma = 0;
 
-        for (X++; X < Y; X++) {
+        for (X+=1; X < Y; X++) {
             if (X % 2 == 1) {
-                soma = soma + X;
+                soma += X;
             }
         }
 

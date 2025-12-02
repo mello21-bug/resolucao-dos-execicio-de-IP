@@ -7,32 +7,29 @@ int main() {
     
     media = 0;
     nro_notas = 0;
-    while(1) {
+    do {
         scanf("%lf", &nota);
-        if(nota < 0 || nota > 10)
+        if(nota < 0 || nota > 10) {
             printf("nota invalida\n");
-        else {
-            media = media + nota;
+        } else {
+            media+=nota;
             nro_notas++;
-            if(nro_notas == 2) {
+             if(nro_notas == 2) {
                 media = media/2;
                 printf("media = %0.2lf\n", media);
-                printf("novo calculo (1-sim 2-nao)\n");
                 
-                while(1) {
-                    scanf("%d",&x);
-                    if(x == 1) {
-                        media = 0;
+                do{
+                printf("novo calculo (1-sim 2-nao)\n");
+                scanf("%d", &x);
+                if (x==1) {
+                    media = 0;
                         nro_notas = 0;
-                        break;
-                    }
-                    else if(x == 2)
-                        return 0;
-                    else
-                        printf("novo calculo (1-sim 2-nao)\n");
-                }
+                } 
+                } while (x<1 || x>2);
             }
+                
         }
-    }
+        
+    } while(x!=2);
     return 0;
 }

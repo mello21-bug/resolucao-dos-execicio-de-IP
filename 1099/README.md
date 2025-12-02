@@ -56,7 +56,7 @@ Em seguida teremos que zerar a variável soma dentro do `for` para que cada loop
 
         soma = 0;
 
-        for (X++; X < Y; X++) {
+        for (X+=1; X < Y; X++) {
             if (X % 2 == 1) {
                 soma = soma + X;
             }
