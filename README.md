@@ -24,7 +24,7 @@ O conteúdo está dividido em pastas ou arquivos que seguem a progressão da dis
 
 ># Tecnologias Utilizadas
 
-Linguagem:  C
+Linguagem: C
 
-Ferramentas:  VSCode
+Ferramentas: VSCode
 
