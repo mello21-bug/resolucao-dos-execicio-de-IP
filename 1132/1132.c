@@ -1,24 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int X, Y, i, soma;
+   
+    int X, Y;
+    int soma=0;
 
-    scanf("%d %d", &X, &Y);
+    scanf("%d%d", &X, &Y);
 
-    soma = 0;
-
-    if (X > Y) {
-        int temp = X;
-        X = Y;
-        Y = temp;
+    if(X>Y) {
+        int temp=X;
+        X=Y;
+        Y=temp;
     }
 
-    for (i = X; i <= Y; i++) {
-        if (i % 13 != 0)
-            soma += i;
+    for(int i=X; i<=Y; i++) {
+
+        if(i%13!=0){
+            soma+=i;
+        }
     }
 
     printf("%d\n", soma);
+    
 
     return 0;
 }

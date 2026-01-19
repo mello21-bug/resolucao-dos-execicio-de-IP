@@ -2,7 +2,7 @@
 
 int main() {
     int valor;
-    int maiorValor = 0; 
+    int maiorValor = 0;
     int posicao = 0;
 
     for (int i = 1; i <=100; i++) {

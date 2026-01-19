@@ -2,34 +2,47 @@
 
 int main() {
 
-    double nota, media, nro_notas;
-    int x;
-    
-    media = 0;
-    nro_notas = 0;
-    do {
-        scanf("%lf", &nota);
-        if(nota < 0 || nota > 10) {
-            printf("nota invalida\n");
-        } else {
-            media+=nota;
-            nro_notas++;
-             if(nro_notas == 2) {
-                media = media/2;
-                printf("media = %0.2lf\n", media);
-                
-                do{
-                printf("novo calculo (1-sim 2-nao)\n");
-                scanf("%d", &x);
-                if (x==1) {
-                    media = 0;
-                        nro_notas = 0;
-                } 
-                } while (x<1 || x>2);
-            }
-                
-        }
+    double nota, soma;
+    int opcao, qnotas;
+
+    while(1) {
         
-    } while(x!=2);
+        soma=0.0;
+        qnotas=0;
+
+        //ler duas notas validas
+        while(qnotas<2) {
+            scanf("%lf", &nota);
+
+            if(nota>=0.0 && nota <=10.0) {
+                soma+=nota; 
+                qnotas++;
+            } else {
+                printf("nota invalida\n");
+            }
+        }
+
+        //imprimir a media 
+
+        printf("media = %.2lf\n", soma/2.0); 
+         
+        //pergunta novo calculo
+
+        while(1) {
+            printf("novo calculo (1-sim 2-nao)\n");
+            scanf("%d", &opcao);
+            
+            if(opcao==1 || opcao==2) {
+                break;
+            }
+        }
+
+        if(opcao==2) {
+            break;
+        }
+
+    }
+
+
     return 0;
 }

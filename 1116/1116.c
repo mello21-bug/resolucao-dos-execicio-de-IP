@@ -1,11 +1,11 @@
 #include <stdio.h>
- 
+
 int main() {
- 
+
     int N, x, y, i;
-    
+
     scanf("%d", &N);
- 
+
     for(i=0;i<N;i++) {
         scanf("%d%d", &x, &y);
         if (y == 0)
@@ -13,6 +13,6 @@ int main() {
         else
             printf("%0.1lf\n", (double)x/y);
     }
-    
+
     return 0;
 }

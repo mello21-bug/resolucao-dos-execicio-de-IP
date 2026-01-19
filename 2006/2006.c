@@ -1,19 +1,19 @@
 #include<stdio.h>
 
 int main(){
-	int cha, degustador, acertos, i;
+    int cha, degustador, acertos, i;
 
-	acertos = 0;
+    acertos = 0;
 
-	scanf("%d", &cha);
+    scanf("%d", &cha);
 
-	for(i=0; i<5; i++){
-		scanf("%d", &degustador);
+    for(i=0; i<5; i++){
+        scanf("%d", &degustador);
 
-		if(cha == degustador)
-			acertos++;
-	}
-	printf("%d\n", acertos);
+        if(cha == degustador)
+            acertos++;
+    }
+    printf("%d\n", acertos);
 
-	return 0;
+    return 0;
 }

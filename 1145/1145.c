@@ -2,17 +2,18 @@
 
 int main() {
 
-    int X, Y, i;
+    int x, y;
+    scanf("%d%d", &x, &y);
 
-    scanf("%d %d", &X, &Y);
-
-    for (i = 1; i <= Y; i++) {
+    for(int i=1; i<=y; i++){
         printf("%d", i);
-
-        if (i % X == 0)
+        
+        if(i%x==0){
             printf("\n");
-        else
+        } else{
             printf(" ");
+        }
+
     }
 
     return 0;

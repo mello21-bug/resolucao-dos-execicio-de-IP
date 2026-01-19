@@ -8,10 +8,10 @@ int main()
     scanf("%d", &N);
 
     for(cont=0; cont<10000; cont++){
-		if(cont%N == 2){
-        	printf("%d\n", cont);
+        if(cont%N == 2){
+            printf("%d\n", cont);
         }
     }
 
-return 0;
+    return 0;
 }
